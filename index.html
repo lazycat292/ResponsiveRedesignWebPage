@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles.css">
+	</head>
+    <body>
+        <div id="topwrapper">
+            <h1>Responsive Redesign</h1>
+        </div>
+        <nav id="navigation">
+            <table>
+                <tr>
+                    <td><a href="#Objective">Objective and Overview</a></td>
+                    <td><a href="#Webpage">Problems of the Web Page</a></td>
+                    <td><a href="#Lowfi">Low-fidelity Wireframes</a></td>
+                    <td><a href="#Hifi">High-fidelity Wireframes</a></td>
+                    <td><a href="#VisualGuide">Visual Design Style Guide</a></td>
+                    <td><a href="#Responsive">Redesigned Web Page</a></td>
+                </tr>
+            </table>
+        </nav>
+        <div id="Objective" class="bodyparagraph">
+            <h2>Objective and Overview</h2>
+            <p>
+                The objective of this project is redesigning a poorly developed web page. In order to do that, I will analyze the
+                the web page using 3 criterias of usuablility, learnability, and memorability and find the problems that prohibit 
+                the users from succesfully using the web page. Then, I will create a general prototype of how the web page will
+                look like and then recreate a responsive version of the web page that solved the initial problems that were detected.
+            </p>
+        </div>
+        <div id="Webpage" class = "bodyparagraph">
+            <h2>Problems of the Web Page</h2>
+            <img src="Webpage.png" alt="Webpage">
+            <a class = "center" href="https://engineering.csuohio.edu/chemical/dr-moo-yeal-lee-1" title="OriginalLink" style="color:rgb(67, 112, 210)">Link</a>
+            <p>The web page I have selected is Dr. Moo-Yeal Lee's university web page. I have worked as an intern at Dr. Lee's 
+                lab and when I was trying to apply for the internship, I remember this web page giving me a lot of confusion.
+                Using the 3 criterias of usuability, learnability, and memorability, I found several problems of this web page.
+            </p>
+            <ul>
+                <div class="bullets">
+                Usability
+                <li>No option for the users to learn about the professor or his work without directly contacting the professor</li>
+                <li>Unable to view examples of previous work or format of the current research</li>
+                <li>No directions for students who are looking for an internship/fellowship</li>
+            </div>
+                <div class="bullets">
+                Learnability
+                <li>No suggestions on what the user should do to apply for an internship/fellowship; very hard for a new user to figure out
+                </li>
+                <li>No indicators of research opportunities, how many internship spots are open, or any type of qualifications the professor is looking for
+                </li>
+            </div>
+            <div class="bullets">
+                Memorability
+                <li>Unless the user has already communicated with the professor, the user will be confused when returning to the design after period of not using it</li>
+            </div>
+            </ul>
+            <p>Furthermore, I used the WebAIM WAIVE website in order to further analyze the accesibility. Some problems
+                that were detected inlcuded low contrast of text to background, missing alternative text, and reduntant text.
+                I conlcuded that low contrast of text to background was a very minor problem and it was very easy to read 
+                all the texts. However, there were soe redutant texts that need to be cleaned up.
+            </p>
+        </div>
+        <div id="Lowfi" class="bodyparagraph">
+            <h2>Low-fidelity Wireframes</h2>
+            <p>The main problems of the web page were centered around the fact that the low amount of information regarding the internship
+                oppotunity contradicted the main purpose of the users vising this web page: looking for an internship. Thus, a simple solution for
+                this web page is providing concrete details so that the users could easily achieve their objectives.
+            </p>
+            <img src="Low_Phone.png" alt="Webpage" class="center">
+            <p class="center">Low-fidelity wireframe of the web page on a monitor</p>
+            <img src="Low_Tablet.png" alt="Webpage" class="center">
+            <p class="center">Low-fidelity wireframe of the web page on a tablet</p>
+            <img src="Low_ActualPhone.png" alt="Webpage" class="center">
+            <p class="center">Low-fidelity wireframe of the web page on a phone</p>
+            <ul>
+                <li>Rearranged the layout of the web in the middle</li>
+                <li>Increased the size of the picture so it can clearly be seen</li>
+                <li>Added different sections to the information section that cover all of the information: research topics,
+                    qulifications, and application process
+                </li>
+                <li>When shrinked from full screen to tablet, the right side of the screen disappears as it covers department news which
+                    is mostly irrelevant to the purpose of the web page.
+                </li>
+                <li>When shrinked from tablet to phone screen, the left side of the screen goes on top of the middle side(
+                    information section). This way, the user can scroll through and still find all the information.
+                </li>
+            </ul>
+        </div>
+        <div id="Hifi" class="bodyparagraph">
+            <h2>High-fidelity Wireframes</h2>
+            <p>Using the general ideas from low-fidelity sketch, I created high-fidelity wireframes for each devices</p>
+            <img src="FullScreen.png" alt="Webpage" class="center">
+            <p class="center">High-fidelity wireframe of the web page on a monitor</p>
+            <ul>
+                Key Design Features
+                <li>Use nav and list feature to create the button menu on the top right side</li>
+                <li>Use 100% width on all the wrappers on the top since it must cover the entire screen</li>
+                <li>Use 3 different div that is next to each other to devide the screen into 3 sections</li>
+                <li>Width of the sections are in percentages ex)20% left, 60% mildde, 20% right</li>
+                <li>Use @media (min-width: x) feature in order to ensure the width of the screen is wide enough
+                    to display all 3 sections
+                </li>
+                <li>Each sections are display:flex and flex-direction: column so that the content inside of each sections
+                    are lined up vertically
+                </li>
+                <li>The links in the left section (About, Academic Programs, and etc.) turn green when user hovers them.
+                    This can be done using class:hover and then setting the background color.
+                </li>
+            </ul>
+            <img src="Tablet.png" alt="Webpage" class="center">
+            <p class="center">High-fidelity wireframe of the web page on a tablet</p>
+            <ul>
+            Key Design Features
+                <li>Since the screen size is shrinking, set the font-size of left section to vx so that they scale with the screen</li>
+                <li>Keep the middle section font the same since it contains the critical information</li>
+                <li>Use @media (min-width: x) and (max-width: y) feature in order to ensure the width of the screen is wide enough
+                    to display more than the middle section but not wide enough to display all 3 sections
+                </li>
+                <li>Use @media (max-width:x) feature in order to make the top wrapper section that include the logo and button menu
+                    disappear once the screen shrinks small enough
+                </li>
+                <li>Width of the two sections are in percentages ex)30% left, 70% middle</li>   
+            </ul>
+            <img src="Phone.png" alt="Webpage" class="center">
+            <p class="center">High-fidelity wireframe of the web page on a phone</p>
+            <ul>
+                Key Design Features
+                    <li>Use @media (max-width: y) feature in order to change the width settings
+                    </li>
+                    <li>Put the left section on top of the middle section by making its width 100%
+                    </li>
+                    <li>Do not change the size of anything in the middle section since it is the critical section</li>
+                    <li>Since the left section can use full width now, get rid of the vx font size and use a constant font size</li>
+                </ul>
+        </div>
+        <div id="VisualGuide" class = "bodyparagraph">
+            <h2>Visual Design Style Guide</h2>
+            <img src="StyleGuide.png" alt="Webpage" class="center">
+            <p>This is the style guide for the recreated responsive web page. Since the web page's main purpose is providing information,
+                there are not many interactive features. There are many links that redirects the users to other web pages of the university.
+            </p>
+        </div>
+        <div id="Responsive" class="bodyparagraph">
+            <h2>Redesigned Web Page</h2>
+            <img src="Redesigned.png" alt="RedesignedWebpage" class="center">
+            <a class = "center" href="https://lazycat292.github.io/ResponsiveRedesign/" title="NewLink" style="color:rgb(67, 112, 210)">Link</a>
+            <p>The preview of the redesigned web page shows a web page that has a very similar setup as the original page.
+                The key differences are that by changing the layout of the center section and increasing font-size, it is 
+                much easier for the users to read through. Also, the user can scroll down towards the bottom where all the
+                information regarding the internship opportunity can be found. As the website shrinks in width, the right section
+                and the top wrapper section disappear while the left section decreases its font-size. If it shrinks to a phone-size width, the left section goes on top of the
+                middle section.
+            </p>
+        </div>
+    </body>
+</html>
